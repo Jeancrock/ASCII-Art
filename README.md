@@ -1,13 +1,13 @@
-# Ascii-Art
 
-## Into
+![Logo](https://github.com/Jeancrock/ASCII-Art/blob/main/template/yellogo.png?raw=true)
 
-Ascii-art est un programme qui prend une string pour argument et retourne une représentation graphique de cette string en utilisant l'ASCII dans le terminal.
-La string entrée en tant qu'argument peut contenir des chiffres, lettres, espaces, caractères spéciaux et prend en charge les retours à la ligne : ``\n``.
-Si une seconde string est entrée, elle permettra de définir la police asii art. 
+
+## Introduction
+
+Ascii-art is a program that takes a string as an argument and returns a graphical representation of that string using ASCII characters in the terminal. The input string can contain numbers, letters, spaces, special characters, and supports newline characters: `\n`. If a second string is provided, it will define the ASCII art font.
 
 ```
-Exemple : 
+Example: 
 
 go run . "Hello\n\nThere" | cat -e
  _    _          _   _          $
@@ -27,13 +27,13 @@ $
    |_|    |_| |_|  \___| |_|     \___| $
                                        $
                                        $
-
 ```
+
 ****************************************************************************************************************************
 
-## Polices
+## Fonts
 
-Avec le progamme se trouvent 4 bibliothèques de caractères qui servent de police d'écriture pour l'ascii-art : 
+The program includes 4 character libraries that serve as fonts for ASCII art: 
 
 ```
         standard.txt    : standard
@@ -41,10 +41,10 @@ Avec le progamme se trouvent 4 bibliothèques de caractères qui servent de poli
         thinkertoy.txt  : thinkertoy
         varsity.txt     : varsity
 ```
-Pour faire appel à ces polices, il faut la mensionner après l'argument que l'on souhaite transcrire en ascii-art.
+To use these fonts, specify the font name after the string you want to convert to ASCII art.
 
 ```
-Exemple : 
+Example: 
 go run . "hello" shadow | cat -e
                                  $
 _|                _| _|          $
@@ -66,42 +66,47 @@ o  o o-o o o o-o $
                  $
 ```
 
-Si le nom des polices est mal renseigné dans la commande, le programme renvera une erreur.
-Si aucune police n'est renseignée, la police par défaut sera `standard`.
+If the font name is incorrect in the command, the program will return an error.
+If no font is specified, the default font will be `standard`.
 
 ****************************************************************************************************************************
 ## Options
 
 ### Output
 
-Par défaut, le programme retourne la représentation graphique en ASCII dans le terminal mais l'option `--output=<fileName.txt>` permet d'enregistrer la string dans un fichier au nom renseigné après l'appel de l'option.
-Si l'option `--output=<fileName.txt>` est utilisée en même temps qu'une autre option, le programme renvera une erreur.
+By default, the program returns the ASCII graphic representation in the terminal, but the `--output=<fileName.txt>` option allows saving the string to a file with the specified name.
+If the `--output=<fileName.txt>` option is used together with another option, the program will return an error.
 
 ```
-Usage : 
+Usage: 
 go run . [OPTION] [STRING] [BANNER]
 
-Exemple :
+Example:
 go run . --output=FileName.txt "hello" shadow
 
 ```
 
 ### Reverse
 
-L'option `--reverse=<fileName.txt>` permet convertir la représentation graphique en ASCII contenu dans un fichier.
-Seule l'option `--color` peut être utilisée avec l'option `--reverse=<fileName.txt>`.
-Le fichier à convertir doit se situer dans le dossier `/fonctions/options/reverse/filesToReverse/`
+The `--reverse=<fileName.txt>` option allows converting an ASCII graphic representation back to text from a file.
+Only the `--color` option can be used with the `--reverse=<fileName.txt>` option.
+The file to be converted must be located in the `/fonctions/options/reverse/filesToReverse/` folder.
 
 ```
-Usage : 
+Usage: 
 go run . [OPTION Reverse] [OPTION Color]
 
-Exemple :
+Example:
 go run . --reverse=fileName.txt --color=red
 
 ```
 
-
 ### Color
 
-L'option `--color="<couleur>"`permet de changer la couleur de la représentation graphique en ASCII ou celle du résultat de l'option `--reverse`. L'option `--color` doit être la dernière option entrée.
+The `--color="<color>"` option changes the color of the ASCII graphic representation or the result of the `--reverse` option. The `--color` option must be the last option entered.
+## Authors
+
+- [Jeancrock](https://github.com/Jeancrock)
+- [Ne0Jiku](https://github.com/Ne0Jiku)
+- [humanwonder](https://github.com/humanwonder)
+
