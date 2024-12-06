@@ -1,4 +1,4 @@
-# Ascii-Art : 
+# Ascii-Art
 
 ## Into
 
